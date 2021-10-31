@@ -11,7 +11,6 @@ const HeaderWrapper = styled.div`
     padding: 8px 16px;
     z-index: 100;
     height: 85px;
-    color: black !important;
   }
   .first {
     padding: 20px 18px;
@@ -23,13 +22,29 @@ const HeaderWrapper = styled.div`
   }
   .first:hover {
     background-color: #f69836;
+    transition: all 0.2s ease-in;
   }
+
+  /* .first::after {
+    content: "";
+    height: 80px;
+    width: 0;
+    position: absolute;
+    left: 0;
+    bottom: -8px;
+    background-color: #febc22;
+    transition: 0.4s;
+    color: white !important;
+  }
+  .first:hover::after {
+    width: 100%;
+    transition: 0.4s;
+    color: white !important;
+  } */
   .icon2 {
     margin-left: 20px;
   }
-  .header li .icon {
-    transition: 0.3s;
-  }
+
   .ground:hover .inner-menu2 {
     opacity: 1;
     visibility: visible;
@@ -43,12 +58,7 @@ const HeaderWrapper = styled.div`
     visibility: hidden;
     z-index: 101;
   }
-  .xullas {
-    padding-top: 15px;
-    padding-bottom: 15px;
-    padding-right: 25px;
-    padding-left: 5px;
-  }
+
   .first:hover .inner-menu {
     opacity: 1;
     visibility: visible;
@@ -76,10 +86,12 @@ const HeaderWrapper = styled.div`
     visibility: hidden;
     z-index: 101;
   }
-  .rang li:hover {
-    color: white !important;
-  }
+
   .xullas {
+    padding-top: 15px;
+    padding-bottom: 15px;
+    padding-right: 25px;
+    padding-left: 5px;
     height: auto;
     transition: 0.3s;
   }
@@ -87,7 +99,9 @@ const HeaderWrapper = styled.div`
     background-color: black;
     transition: 0.3s;
   }
-
+  .xullas:hover a {
+    color: white !important;
+  }
   .xullas a {
     font-size: 16px;
     color: black;
