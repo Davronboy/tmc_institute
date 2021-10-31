@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 const HeaderWrapper = styled.div`
   .header {
-    background-color: blue;
+    background-color: white;
     font-family: "Inter", sans-serif;
     position: fixed;
     left: 0;
@@ -11,6 +11,7 @@ const HeaderWrapper = styled.div`
     padding: 8px 16px;
     z-index: 100;
     height: 85px;
+    color: black !important;
   }
   .first {
     padding: 20px 18px;
@@ -29,11 +30,7 @@ const HeaderWrapper = styled.div`
   .header li .icon {
     transition: 0.3s;
   }
-  .header li:hover .icon {
-    transform: rotateZ(-180deg);
-  }
   .ground:hover .inner-menu2 {
-    transform: translateY(0px);
     opacity: 1;
     visibility: visible;
   }
@@ -41,7 +38,6 @@ const HeaderWrapper = styled.div`
     position: absolute;
     top: 0;
     left: 240px;
-    transform: translateY(-30px);
     opacity: 0;
     width: 225px;
     visibility: hidden;
@@ -54,22 +50,20 @@ const HeaderWrapper = styled.div`
     padding-left: 5px;
   }
   .first:hover .inner-menu {
-    transform: translateY(0px);
     opacity: 1;
     visibility: visible;
   }
+
   .inner-menu {
     position: absolute;
     top: 64px;
     left: 0;
-    transform: translateY(-30px);
     opacity: 0;
     width: 240px;
     visibility: hidden;
     z-index: 101;
   }
   .first:hover .inner-menu3 {
-    transform: translateY(0px);
     opacity: 1;
     visibility: visible;
   }
@@ -77,7 +71,6 @@ const HeaderWrapper = styled.div`
     position: absolute;
     top: 64px;
     left: 0;
-    transform: translateY(-30px);
     opacity: 0;
     width: 300px;
     visibility: hidden;
@@ -92,7 +85,6 @@ const HeaderWrapper = styled.div`
   }
   .xullas:hover {
     background-color: black;
-    color: white !important;
     transition: 0.3s;
   }
 
@@ -129,13 +121,31 @@ const HeaderWrapper = styled.div`
     padding-left: 20px;
   }
   .icon3 {
-    color: white;
+    color: black;
     transition: 0.3s;
   }
   .icon3:hover {
     transition: 0.3s;
     cursor: pointer;
     color: #f69836;
+  }
+  .sidebarde {
+    padding-left: 96px;
+  }
+  .bir {
+    width: 23%;
+  }
+  .birbir {
+    margin-top: 70px;
+    padding-right: 88px;
+    padding-bottom: 63px;
+  }
+  .birparagh {
+    margin-top: 30px;
+    margin-bottom: 15px;
+  }
+  .birlink {
+    margin-top: 20px;
   }
 `;
 

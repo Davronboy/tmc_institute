@@ -1,5 +1,6 @@
 import {
   faAlignRight,
+  faBars,
   faChevronDown,
   faChevronRight,
   faSearch,
@@ -27,7 +28,34 @@ let data = [
     to7: "/",
   },
 ];
-
+let Admissondata = [
+  {
+    link17: "Overview",
+    to17: "/",
+    link18: "Date & Deadlines",
+    to18: "/",
+    link19: "How to Apply",
+    to19: "/",
+    link20: "Financial Aid",
+    to20: "/",
+    link21: "Tuition & Fees",
+    to21: "/",
+  },
+];
+let Studentdata = [
+  {
+    link22: "Overview",
+    to22: "/",
+    link23: "  Student Portal",
+    to23: "/",
+    link24: "Schedule a Tour",
+    to24: "/",
+    link25: " The Campus Experience",
+    to25: "/",
+    link26: " Support & Guidance",
+    to26: "/",
+  },
+];
 const Header = () => {
   return (
     <>
@@ -41,14 +69,14 @@ const Header = () => {
               className="w-100"
             />
             <div className="margn">
-              <ul className="p-0 m-0  d-flex align-items-center d-none d-lg-flex">
+              <ul className="p-0 m-0  d-flex align-items-center d-none d-xl-flex">
                 <li className=" first active">
-                  <Link to="" className="text-white ">
+                  <Link to="" className="">
                     Home
                   </Link>
                 </li>
                 <li className=" first">
-                  <Link to="" className="text-white ">
+                  <Link to="" className=" ">
                     About{" "}
                     <FontAwesomeIcon
                       icon={faChevronDown}
@@ -84,15 +112,13 @@ const Header = () => {
                   </Link>
                 </li>
                 <li className=" first">
-                  <Link to="" className="text-white ">
+                  <Link to="" className=" ">
                     Courses
                     <FontAwesomeIcon
                       icon={faChevronDown}
                       className="icon fs-6 ms-1"
                     />
                     <div className="inner-menu optawaw bg-white shadow">
-                      {/* col-6 col-lg-4  pastigi */}
-
                       <ul className="m-0 p-0">
                         <li className="xullas">
                           <Link>Overview</Link>
@@ -139,67 +165,67 @@ const Header = () => {
                   </Link>
                 </li>
                 <li className=" first">
-                  <Link to="" className="text-white ">
+                  <Link to="" className=" ">
                     Admisson
                     <FontAwesomeIcon
                       icon={faChevronDown}
                       className="icon fs-6"
                     />
-                    <div className="inner-menu optawaw bg-white shadow">
-                      {/* col-6 col-lg-4  pastigi */}
-
-                      <ul className="m-0 p-0 rang">
-                        <li className="xullas">
-                          <Link>Overview</Link>
-                        </li>
-                        <li className="xullas">
-                          <Link>Date & Deadlines</Link>
-                        </li>
-                        <li className="xullas">
-                          <Link>How to Apply</Link>
-                        </li>
-                        <li className="xullas">
-                          <Link>Financial Aid</Link>
-                        </li>
-                        <li className="xullas">
-                          <Link>Tuition & Fees</Link>
-                        </li>
-                      </ul>
-                    </div>
+                    {Admissondata.map((value, index) => (
+                      <div className="inner-menu optawaw bg-white shadow">
+                        <ul className="m-0 p-0 rang">
+                          <li className="xullas">
+                            <Link to={value.to17}>{value.link17}</Link>
+                          </li>
+                          <li className="xullas">
+                            <Link to={value.to18}>{value.link18}</Link>
+                          </li>
+                          <li className="xullas">
+                            <Link to={value.to19}>{value.link19}</Link>
+                          </li>
+                          <li className="xullas">
+                            <Link to={value.to20}>{value.link20}</Link>
+                          </li>
+                          <li className="xullas">
+                            <Link to={value.to21}>{value.link21}</Link>
+                          </li>
+                        </ul>
+                      </div>
+                    ))}
                   </Link>
                 </li>
                 <li className=" first">
-                  <Link to="" className="text-white ">
+                  <Link to="" className=" ">
                     Student Life
                     <FontAwesomeIcon
                       icon={faChevronDown}
                       className="icon fs-6"
                     />
-                    <div className="inner-menu optawaw bg-white shadow">
-                      {/* col-6 col-lg-4  pastigi */}
-
-                      <ul className="m-0 p-0 rang">
-                        <li className="xullas">
-                          <Link>Overview</Link>
-                        </li>
-                        <li className="xullas">
-                          <Link>Student Portal</Link>
-                        </li>
-                        <li className="xullas">
-                          <Link>Schedule a Tour</Link>
-                        </li>
-                        <li className="xullas">
-                          <Link>The Campus Experience</Link>
-                        </li>
-                        <li className="xullas">
-                          <Link>Support & Guidance</Link>
-                        </li>
-                      </ul>
-                    </div>
+                    {Studentdata.map((value, index) => (
+                      <div className="inner-menu optawaw bg-white shadow">
+                        <ul className="m-0 p-0 rang">
+                          <li className="xullas">
+                            <Link to={value.to22}>{value.link22}</Link>
+                          </li>
+                          <li className="xullas">
+                            <Link to={value.to23}>{value.link23}</Link>
+                          </li>
+                          <li className="xullas">
+                            <Link to={value.to24}>{value.link24}</Link>
+                          </li>
+                          <li className="xullas">
+                            <Link to={value.to25}>{value.link25}</Link>
+                          </li>
+                          <li className="xullas">
+                            <Link to={value.to26}>{value.link26}</Link>
+                          </li>
+                        </ul>
+                      </div>
+                    ))}
                   </Link>
                 </li>
                 <li className=" first">
-                  <Link to="" className="text-white ">
+                  <Link to="" className=" ">
                     Online Exam
                     <FontAwesomeIcon
                       icon={faChevronDown}
@@ -218,12 +244,12 @@ const Header = () => {
                   </Link>
                 </li>
                 <li className=" first">
-                  <Link to="" className="text-white ">
+                  <Link to="" className=" ">
                     Apply
                   </Link>
                 </li>
                 <li className="first">
-                  <Link to="" className="text-white ">
+                  <Link to="" className=" ">
                     Careers
                   </Link>
                 </li>
@@ -234,13 +260,44 @@ const Header = () => {
             <div className="diviconga">
               <Link>
                 {" "}
-                <FontAwesomeIcon icon={faAlignRight} className="fs-4 icon3" />{" "}
+                <FontAwesomeIcon
+                  icon={faAlignRight}
+                  className="fs-4 icon3 d-none d-xl-flex"
+                />{" "}
+                {/* <div className="sidebarde">
+                  <div className="bir">
+                    <div className="birbir">
+                      <div className="birtitle">
+                        <h4 className="m-0">Welcome</h4>
+                      </div>
+                      <div className="birparagh">
+                          <p className="p-0 m-0"></p>
+                        At TMC Academy, we are “Every Step with You” in your
+                        education journey. We hope to be your partner in
+                        achieving your academic dreams and we look forward to
+                        welcoming you as a student at TMC.
+                      </div>
+                      <div className="birlink">
+                          <Link> About Us </Link>
+                      </div>
+                    </div>
+                  </div>
+                </div> */}
               </Link>
             </div>
             <div className="diviconga2">
               <Link>
                 {" "}
                 <FontAwesomeIcon icon={faSearch} className="fs-4 icon3" />{" "}
+              </Link>
+            </div>
+            <div className="diviconga2">
+              <Link>
+                {" "}
+                <FontAwesomeIcon
+                  icon={faBars}
+                  className="fs-4 icon3 d-xl-none d-inline-block"
+                />{" "}
               </Link>
             </div>
           </div>
